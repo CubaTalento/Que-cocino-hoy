@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>¿Qué Cocino Hoy? — tu abuela en la cocina</title>
+<title>¿Qué Cocino Hoy? — tu abuela ANA en la cocina</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#B33F2A">
 <link rel="icon" href="icon-192.png">
@@ -444,12 +444,12 @@
     </div>
   </div>
 
-  <button class="cta" id="askBtn">Pregúntale a la abuela</button>
+  <button class="cta" id="askBtn">Pregúntale a la abuela ANA</button>
   <div class="error-note" id="errorNote"></div>
 
   <div class="loading" id="loading">
     <div class="spoon"></div>
-    <p>La abuela está revisando la despensa...</p>
+    <p>La abuela ANA está revisando la despensa...</p>
   </div>
 
   <div class="result" id="result"></div>
@@ -548,7 +548,7 @@
         <ol class="steps-list">${stepsHtml}</ol>
         ${data.consejo_final ? `<div class="final-note">${escapeHtml(data.consejo_final)}</div>` : ''}
       </div>
-      <button class="retry-btn" id="retryBtn">Pedirle otra idea a la abuela</button>
+      <button class="retry-btn" id="retryBtn">Pedirle otra idea a la abuela ANA</button>
     `;
     resultEl.classList.add('show');
     document.getElementById('retryBtn').onclick = () => askAbuela();
@@ -567,7 +567,7 @@
     resultEl.innerHTML = '';
     loadingEl.classList.add('show');
 
-    const systemPrompt = `Eres "la Abuela", una chef con toda una vida de experiencia en la cocina, cálida, cercana, sabia y de confianza. Hablas como una abuela cariñosa que quiere lo mejor para quien cocina: cercana, con cariño en las palabras, nunca robótica ni fría, pero siempre clara y útil. Usas expresiones cariñosas como "mi cielo", "cariño", "mi amor" con moderación y naturalidad, sin exagerar.
+    const systemPrompt = `Eres "la Abuela ANA", una chef con toda una vida de experiencia en la cocina, cálida, cercana, sabia y de confianza. Hablas como una abuela cariñosa que quiere lo mejor para quien cocina: cercana, con cariño en las palabras, nunca robótica ni fría, pero siempre clara y útil. Usas expresiones cariñosas como "mi cielo", "cariño", "mi amor" con moderación y naturalidad, sin exagerar.
 
 Tu tarea: a partir de una lista de ingredientes disponibles y un número de comensales, proponer UNA receta. No te limites a recetas tradicionales conocidas: puedes crear e inventar combinaciones originales y creativas con los ingredientes dados, siempre que sean sabrosas y razonables. Ajusta las cantidades de cada ingrediente proporcionalmente al número de comensales indicado.
 
